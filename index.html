@@ -20,201 +20,226 @@
     <title>Cadastro de Aluno</title>
   </head>
   <body>
-    <main class="container-fluid">
-      <div class="row form-container">
-        <div id="hero-img" class="col-md-4 d-none d-md-block image-side"></div>
-        <div class="col-md-8 d-flex align-items-center justify-content-center">
-          <div class="form shadow">
-            <h2 class="">Cadastro de Aluno</h2>
-            <form action="" class="needs-validation mt-4" novalidate>
-              <div class="row g-3 mb-3">
-                <div class="col has-validation">
-                  <label for="formFName" class="form-label"
-                    >Primeiro Nome:</label
-                  >
-                  <input
-                    type="text"
-                    maxlength="40"
-                    class="form-control"
-                    placeholder="Primeiro Nome"
-                    aria-label="Primeiro nome"
-                    required
-                  />
-                  <div class="invalid-feedback">Campo obrigatório</div>
-                </div>
-                <div class="col has-validation">
-                  <label for="formLName" class="form-label">Sobrenome:</label>
-                  <input
-                    type="text"
-                    maxlength="40"
-                    class="form-control"
-                    placeholder="Sobrenome"
-                    aria-label="Sobrenome"
-                    required
-                  />
-                  <div class="invalid-feedback">Campo obrigatório</div>
-                </div>
+    <div class="row form-container">
+      <div id="hero-img" class="col-md-4 d-none d-md-block image-side"></div>
+      <div class="col-md-8 d-flex align-items-center justify-content-center">
+        <div class="form shadow">
+          <h2>Cadastro de Aluno</h2>
+          <form action="" id="form" class="needs-validation mt-4" novalidate>
+            <div class="row g-3 mb-3">
+              <div class="col has-validation">
+                <label for="formFName" class="form-label">Primeiro Nome:</label>
+                <input
+                  id="formFName"
+                  type="text"
+                  maxlength="40"
+                  class="form-control"
+                  placeholder="Primeiro Nome"
+                  aria-label="Primeiro nome"
+                  required
+                />
+                <div class="invalid-feedback">Campo obrigatório</div>
               </div>
-              <div class="row g-3 mb-3">
-                <div class="col has-validation">
-                  <div class="">
-                    <label for="formCpf" class="form-label">CPF:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="000.000.000-00"
-                      pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
-                      aria-label="cpf"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Por favor, insira um CPF válido.
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <label for="formLTel" class="form-label">Contato:</label>
+              <div class="col has-validation">
+                <label for="formLName" class="form-label">Sobrenome:</label>
+                <input
+                  id="formLName"
+                  type="text"
+                  maxlength="40"
+                  class="form-control"
+                  placeholder="Sobrenome"
+                  aria-label="Sobrenome"
+                  required
+                />
+                <div class="invalid-feedback">Campo obrigatório</div>
+              </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col has-validation">
+                <div class="">
+                  <label for="formCpf" class="form-label">CPF:</label>
                   <input
-                    type="tel"
+                    id="formCpf"
+                    type="text"
                     class="form-control"
-                    placeholder="(XX) XXXXX-XXXX"
-                    pattern="([0-9]{2})([0-9]{4,5})([0-9]{4})"
-                    aria-label="fone"
+                    placeholder="000.000.000-00"
+                    pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+                    aria-label="cpf"
                     required
                   />
                   <div class="invalid-feedback">
-                    O número deve seguir o padrão exigido.
+                    Por favor, insira um CPF válido.
                   </div>
                 </div>
               </div>
-
-              <div class="row g-3 mb-3">
-                <div class="col">
-                  <label for="formSex" class="form-label">Sexo:</label>
-                  <select class="form-select" aria-label="Sexo">
-                    <option value="1">Selecione uma opção:</option>
-                    <option value="2">Feminino</option>
-                    <option value="3">Masculino</option>
-                    <option value="4">Prefiro não dizer</option>
-                  </select>
-                </div>
-                <div class="col">
-                  <label for="formDate" class="form-label"
-                    >Data de nascimento:</label
-                  >
-                  <input
-                    type="date"
-                    class="form-control"
-                    aria-label="Data de nascimento"
-                    required
-                  />
-                  <div class="invalid-feedback">Campo obrigatório</div>
-                </div>
-              </div>
-              <div class="g-3 mt-3 mb-3">
-                <label for="formLTel" class="form-label inline"
-                  >Você é uma pessoa com deficiência (PCD)? :</label
-                >
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inlineRadio1"
-                    value="Sim"
-                  />
-                  <label class="form-check-label" for="inlineRadio1">Sim</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inlineRadio2"
-                    value="Não"
-                  />
-                  <label class="form-check-label" for="inlineRadio2">Não</label>
-                </div>
-              </div>
-              <div class="row g-3 mb-3">
-                <div class="col">
-                  <label for="" class="form-label">Email:</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="nome@example.com"
-                    required
-                  />
-                  <div class="invalid-feedback">Campo obrigatório</div>
-                </div>
-
-                <div class="col">
-                  <label for="" class="form-label">Confirme o seu email:</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="verify-email"
-                    placeholder="nome@example.com"
-                    required
-                  />
-                  <div class="invalid-feedback">Campo obrigatório</div>
-                </div>
-              </div>
-              <div class="row g-3 mb-3">
-                <div class="col">
-                  <label for="" class="form-label">Senha:</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    placeholder="Digite sua senha."
-                    required
-                  />
-                  <div class="invalid-feedback">Campo obrigatório</div>
-                </div>
-                <div class="col">
-                  <label for="formSenha" class="form-label"
-                    >Confirme a sua senha:</label
-                  >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="verify-passw"
-                    placeholder="Digite a mesma senha."
-                    required
-                  />
-                  <div class="invalid-feedback">Campo obrigatório</div>
-                </div>
-              </div>
-              <div class="g-3 form-check mb-3">
+              <div class="col">
+                <label for="formTel" class="form-label">Contato:</label>
                 <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="agree"
-                  id="invalidCheck"
+                  id="formTel"
+                  type="tel"
+                  class="form-control"
+                  placeholder="(XX) XXXXX-XXXX"
+                  pattern="([0-9]{2})\s([0-9]{4,5})-([0-9]{4})"
+                  aria-label="fone"
                   required
                 />
-                <label class="form-check-label" for="invalidCheck">
-                  Eu aceito os Termos e Condições
-                </label>
+                <div class="invalid-feedback">
+                  O número deve seguir o padrão exigido.
+                </div>
               </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col">
+                <label for="formSexo" class="form-label">Sexo:</label>
+                <select
+                  id="formSexo"
+                  class="form-select"
+                  aria-label="Sexo"
+                  required
+                >
+                  <option selected disabled value="">
+                    Selecione uma opção:
+                  </option>
+                  <option value="2">Feminino</option>
+                  <option value="3">Masculino</option>
+                  <option value="4">Prefiro não dizer</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="formDate" class="form-label"
+                  >Data de nascimento:</label
+                >
+                <input
+                  id="formDate"
+                  type="date"
+                  class="form-control"
+                  aria-label="Data de nascimento"
+                  required
+                />
+                <div class="invalid-feedback">Campo obrigatório</div>
+              </div>
+            </div>
+            <div class="g-3 mt-3 mb-3">
+              <label for="formRadio" class="form-label inline"
+                >Você é uma pessoa com deficiência (PCD)? :</label
+              >
+              <div id="formRadio" class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="Sim"
+                  required
+                />
+                <label class="form-check-label" for="inlineRadio1">Sim</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="Não"
+                />
+                <label class="form-check-label" for="inlineRadio2">Não</label>
+              </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col">
+                <label for="formEmail" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="formEmail"
+                  placeholder="nome@example.com"
+                  required
+                />
+                <div class="invalid-feedback">
+                  O email deve possuir @domínio.
+                </div>
+              </div>
+
+              <div class="col">
+                <label for="confEmail" class="form-label"
+                  >Confirme o seu email:</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="confEmail"
+                  placeholder="nome@example.com"
+                  required
+                />
+                <div class="invalid-feedback">Emails não são iguais</div>
+              </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col">
+                <label for="formPassw" class="form-label">Senha:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="formPassw"
+                  placeholder="Digite sua senha."
+                  required
+                />
+                <div class="invalid-feedback">Campo obrigatório</div>
+              </div>
+              <div class="col">
+                <label for="confPassw" class="form-label"
+                  >Confirme a sua senha:</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confPassw"
+                  placeholder="Digite a mesma senha."
+                  required
+                />
+                <div class="invalid-feedback">As senhas não são iguais</div>
+              </div>
+            </div>
+            <div class="g-3 form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="agree"
+                id="invalidCheck"
+                required
+              />
+              <label class="form-check-label" for="invalidCheck">
+                Eu aceito os <a href="#">Termos e Condições.</a>
+              </label>
               <div class="invalid-feedback">
-                You must agree before submitting.
+                Você precisa concordar com os termos e condições para continuar.
               </div>
-              <div class="col-auto">
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+              <div class="d-flex gap-2 mt-3 justify-content-ends">
+                <input
+                  type="submit"
+                  id="submit"
+                  class="btn btn-primary d-flex"
+                  value="Cadastrar"
+                />
+                <input
+                  class="btn btn-secondary d-flex"
+                  type="reset"
+                  id="reset"
+                  value="Limpar"
+                />
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
-    </main>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
     <script src="script.js" defer></script>
+    <script src="validacao.js"></script>
   </body>
 </html>
